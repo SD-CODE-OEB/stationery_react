@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/stationery_react/static/css/main.f855e6bc.css",
+    "main.js": "/stationery_react/static/js/main.a613f4d1.js",
+    "index.html": "/stationery_react/index.html",
+    "main.f855e6bc.css.map": "/stationery_react/static/css/main.f855e6bc.css.map",
+    "main.a613f4d1.js.map": "/stationery_react/static/js/main.a613f4d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.a613f4d1.js"
+  ]
+}
