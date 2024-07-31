@@ -1,0 +1,7 @@
+div.card {
+  background-color: var(--secondary-color);
+}
+.cards .card-title {
+  color: var(--accent-color-3);
+  background-color: var(--secondary-color);
+}

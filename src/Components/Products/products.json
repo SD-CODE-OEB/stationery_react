@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Pen",
+    "img": "https://cdn.pixabay.com/photo/2014/11/24/11/38/pen-543858_1280.jpg",
+    "price": 100
+  },
+  {
+    "id": 2,
+    "name": "Notebook",
+    "img": "https://cdn.pixabay.com/photo/2014/04/05/12/19/notebook-316823_1280.jpg",
+    "price": 200
+  },
+  {
+    "id": 3,
+    "name": "Eraser",
+    "img": "https://cdn.pixabay.com/photo/2018/11/18/02/07/eraser-3822402_1280.jpg",
+    "price": 300
+  },
+  {
+    "id": 4,
+    "name": "Stapler",
+    "img": "https://cdn.pixabay.com/photo/2015/02/15/20/03/stapler-637555_1280.jpg",
+    "price": 400
+  },
+  {
+    "id": 5,
+    "name": "Coloured Pencils",
+    "img": "https://cdn.pixabay.com/photo/2019/02/10/12/55/colored-pencil-3987166_1280.jpg",
+    "price": 500
+  },
+  {
+    "id": 6,
+    "name": "Scissors",
+    "img": "https://cdn.pixabay.com/photo/2014/04/10/19/53/scissors-321238_1280.jpg",
+    "price": 600
+  }
+]
