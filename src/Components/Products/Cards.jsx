@@ -1,14 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./cards.css";
 import products from "./products.json";
 import Btns from "./Btns";
-import { AppContext } from "../../context";
+// import { useFetch } from "./useFetch";
+// import { AppContext } from "../../context";
 const Cards = () => {
-  const { cartItem } = useContext(AppContext);
-  function addToCart() {
-    console.log("Added to Cart");
-  }
-  // const PATH = process.env.REACT_APP_PATH;
+  const PATH = process.env.REACT_APP_PATH;
+  // const url = "http://localhost:3000/products";
+  // const [data] = useFetch(url);
+
   return (
     <div className="container h-100 cards px-lg-5">
       <div className="row m-auto px-4">
@@ -18,7 +18,7 @@ const Cards = () => {
             <div className="col-4 gy-4 gx-5">
               <div className="card w-auto border-0">
                 <img
-                  src={`${product.img}`}
+                  src={`${PATH}${product.img}`}
                   alt=""
                   className="card-img rounded-top rounded-0"
                   height={200}
