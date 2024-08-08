@@ -15,7 +15,7 @@ const Cards = () => {
         {/* {cartItem} */}
         {products &&
           products.map((product) => (
-            <div className="col-lg-4 col-md-6 gy-4 gx-5">
+            <div className="col-lg-4 col-md-6 gy-4 gx-5" key={product.id}>
               <div className="card w-auto border-0">
                 <img
                   src={`${PATH}${product.img}`}

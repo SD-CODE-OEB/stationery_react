@@ -4,6 +4,7 @@ import { BiMenu, BiStore, BiX } from "react-icons/bi";
 import { LuLogIn, LuLogOut } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../context";
+import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
   const PATH = process.env.REACT_APP_PATH;
@@ -11,7 +12,7 @@ const Navbar = () => {
   const { user, logged } = useContext(AppContext);
   return (
     <nav className="nav navbar-expand-lg d-flex shadow-sm">
-      <h1 className="px-4">
+      <h1 className="px-4 col-4">
         <Link to={`${PATH}/`} className="btn btn-outline-dark">
           <BiStore />
           Store
@@ -44,8 +45,19 @@ const Navbar = () => {
           <BiX />
         </button>
       )}
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div
+        className="collapse navbar-collapse align-self-end col-4 d-flex justify-content-end"
+        id="navbarSupportedContent"
+      >
         <ul className="navbar nav pe-lg-4">
+          {logged ? (
+            <li className="nav-item d-flex justify-content-between align-items-center me-1 fw-bold">
+              <CgProfile className="fs-4 me-1" />
+              {user.name}
+            </li>
+          ) : (
+            ""
+          )}
           <li className="nav-item">
             <Link to={`${PATH}/cart`} className="nav-link">
               Cart
@@ -71,7 +83,6 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      {logged ? <h3 className="me-3">Welcome {user.name}</h3> : ""}
     </nav>
   );
 };
