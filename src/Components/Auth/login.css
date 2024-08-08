@@ -1,9 +1,24 @@
+.login {
+  background-color: var(--accent-color-5);
+}
+.card .card-title {
+  color: var(--primary-color);
+}
+.login .card .card-title,
+.register .card .card-title {
+  text-decoration: var(--accent-color-3) double underline;
+}
+.card-body p label {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
 .card-body p input {
   width: 100%;
   padding: 8px 0;
   padding-right: 30px;
   padding-left: 10px;
-  border: 3px solid #ccc;
+  border: 3px solid var(--primary-color);
   border-radius: 5px;
   transition: all 0.3s ease;
   outline: none;
@@ -15,13 +30,16 @@
   width: 150px;
   padding: 5px 20px;
   margin: 10px 0;
-  border: 3px solid #ccc;
+  border: 3px solid var(--primary-color);
   border-radius: 5px;
   outline: none;
-  color: white;
+  color: var(--primary-color);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 .card-body p .btn:hover {
   background-color: var(--accent-color-1);
+}
+.card-body h6 {
+  color: var(--primary-color);
 }

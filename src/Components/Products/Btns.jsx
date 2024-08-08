@@ -18,7 +18,7 @@ const Btns = (props) => {
       <div className="container d-flex justify-content-center align-items-center">
         <button
           type="button"
-          className="btn btn-success"
+          className="btn btn-add"
           onClick={() => addCart(props.id)}
         >
           <BiCartAdd /> Add
@@ -27,16 +27,16 @@ const Btns = (props) => {
     );
   } else {
     return (
-      <div className="container d-flex justify-content-around align-items-center py-3">
+      <div className="container d-flex justify-content-around align-items-center">
         <button
           type="button"
-          className="btn btn-warning border-0"
+          className="btn btn-danger border-0"
           onClick={() => updateCart(props.id, cartItem[props.id] - 1)}
           //here we are getting the value of is using it as a key to access it from {} in cartItem
         >
           <BiMinus />
         </button>
-        <div className="">{cartItem[props.id]}</div>
+        <div className="fw-bolder fs-5">{cartItem[props.id]}</div>
         <button
           type="button"
           className="btn btn-success"

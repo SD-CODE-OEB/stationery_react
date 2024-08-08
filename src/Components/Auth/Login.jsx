@@ -1,8 +1,9 @@
 import React from "react";
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./login.css";
 import { AppContext } from "../../context";
+import Container from "../../Container";
+import "./login.css";
 
 const Login = () => {
   const PATH = process.env.REACT_APP_PATH;
@@ -21,11 +22,9 @@ const Login = () => {
     }
   };
   return (
-    <div className="container-fluid-lg m-0 py-4">
-      <div className="card bg-transparent text-light w-100 ">
-        <h1 className="card-title text-center fs-2 text-white fw-bolder my-3">
-          Sign In
-        </h1>
+    <Container className="container-fluid-lg m-0 login">
+      <div className="card bg-transparent text-light w-100 border-0 rounded-0 py-4">
+        <h1 className="card-title text-center fw-bolder my-3">Sign In</h1>
         <div className="card-body d-flex justify-content-center align-items-center flex-column">
           <p className="my-3">
             <label htmlFor="email" className="label form-label d-block">
@@ -59,7 +58,7 @@ const Login = () => {
           </h6>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

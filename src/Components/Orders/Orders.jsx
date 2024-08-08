@@ -1,7 +1,8 @@
 import React from "react";
+import Container from "../../Container";
 
 const Orders = () => {
-  return <div>Ordrs</div>;
+  return <Container>Ordrs</Container>;
 };
 
 export default Orders;

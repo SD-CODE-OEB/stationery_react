@@ -12,8 +12,8 @@
 }
 
 #root {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: var(--accent-color-5);
+  color: var(--primary-color);
   font-family: "Open Sans", sans-serif;
 }
 h1,

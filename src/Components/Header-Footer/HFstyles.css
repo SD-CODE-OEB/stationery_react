@@ -2,7 +2,7 @@
   background-color: var(--primary-color);
   color: var(--accent-color-5);
   width: 100%;
-  height: 50px;
+  height: 80px;
   font-size: 20px;
   font-weight: 500;
   position: relative;
@@ -14,6 +14,14 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--primary-color);
+  color: var(--accent-color-5);
+}
+.nav .toggle {
+  transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.nav .toggle:hover {
+  transform: scale(1.1);
+  color: var(--accent-color-2);
 }
 .nav a {
   color: var(--accent-color-5);
@@ -21,5 +29,5 @@
   padding: 10px;
 }
 .nav a:hover {
-  color: var(--accent-color-1);
+  color: var(--accent-color-2);
 }

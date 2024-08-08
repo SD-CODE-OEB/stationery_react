@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AppContext } from "../../context";
+import Container from "../../Container";
 
 const Register = (props) => {
   const PATH = process.env.REACT_APP_PATH;
@@ -39,12 +40,10 @@ const Register = (props) => {
   };
 
   return (
-    <div className="container-fluid-lg">
+    <Container className="container-fluid-lg register">
       <div className="card bg-transparent text-light ">
-        <h1 className="card-title text-center fs-2 text-white fw-bolder my-3">
-          Sign up
-        </h1>
-        <p className="fs-5 fw-bold text-decoration-underline text-center py-2">
+        <h1 className="card-title text-center fw-bolder">Sign up</h1>
+        <p className="fs-5 fw-bold text-decoration-underline text-center pt-2">
           {res}
         </p>
         <div className="card-body d-flex justify-content-center align-items-center flex-column">
@@ -125,7 +124,7 @@ const Register = (props) => {
           </h6>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

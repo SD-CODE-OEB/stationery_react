@@ -15,7 +15,7 @@ const Cards = () => {
         {/* {cartItem} */}
         {products &&
           products.map((product) => (
-            <div className="col-4 gy-4 gx-5">
+            <div className="col-lg-4 col-md-6 gy-4 gx-5">
               <div className="card w-auto border-0">
                 <img
                   src={`${PATH}${product.img}`}
@@ -23,15 +23,20 @@ const Cards = () => {
                   className="card-img rounded-top rounded-0"
                   height={200}
                 />
-                <div className="card-body p-0">
+                <div className="card-body p-0 py-2">
                   <div className="row">
-                    <div className="col-6">
-                      <div className="card-title px-2 fs-6 fw-bold">
+                    <div className="col-lg-7">
+                      <div className="card-title ps-2 fs-4 fw-bold">
                         {product.name}
                       </div>
-                      <div className="px-2">Price: ${product.price}</div>
+                      <div className="px-2 card-price fw-bold fs-4">
+                        Price:
+                        <span className="fw-lighter fs-5">
+                          ${product.price}
+                        </span>
+                      </div>
                     </div>
-                    <div className="col-6 text-center d-flex justify-content-center align-items-center">
+                    <div className="col-lg-5 text-center d-flex justify-content-center align-items-center">
                       <Btns id={product.id} />
                     </div>
                   </div>

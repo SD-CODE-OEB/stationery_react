@@ -24,7 +24,7 @@ function App() {
           <Route path={`${PATH}/orders`} element={<Orders />} />
         </Routes>
       </Router>
-      <hr />
+      <hr className="m-0" />
       <Footer />
     </div>
   );
