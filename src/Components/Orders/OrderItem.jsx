@@ -1,0 +1,56 @@
+import React from "react";
+import products from "../Products/products.json";
+
+const OrderItem = (props) => {
+  const { order, index } = props;
+  const calculateTotalPrice = (order) => {
+    let totalPrice = 0;
+    Object.keys(order.things).map((key) => {
+      const product = products.find((p) => p.id == key);
+      if (product) {
+        totalPrice += product.price * order.things[key];
+      }
+    });
+    return totalPrice;
+  };
+  return (
+    <div>
+      <div className="row px-4 fs-4 order">
+        <div className="col-lg-9 col-md-6">
+          <div
+            className="d-flex flex-wrap order-info fw-normal bg-dark-subtle  fst-italic"
+            key={index}
+          >
+            <span className="order-num pe-2">Order {index + 1}:</span> Your
+            order for&nbsp;
+            <span className=" fw-bold fs-4 total-price">
+              &#8377;{calculateTotalPrice(order)}
+            </span>
+            &nbsp;is registered successfully.
+            {/* {Object.keys(order.things).map((key) => (
+              <span className="px-1" key={products[key - 1].name}>
+                {products[key - 1].name}s
+              </span>
+            ))} */}
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6">
+          <div className="d-flex flex-column flex-wrap ps-2" key={index}>
+            {calculateTotalPrice(order) < 1500 ? (
+              <span className="fs-3 fw-bold status-state order-delivered">
+                Delivered
+              </span>
+            ) : (
+              <span className="fs-3 fw-bold status-state order-pending">
+                Pending
+              </span>
+            )}
+          </div>
+        </div>
+        <hr />
+      </div>
+    </div>
+  );
+};
+
+export default OrderItem;

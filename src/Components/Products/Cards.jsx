@@ -2,6 +2,7 @@ import React from "react";
 import "./cards.css";
 import products from "./products.json";
 import Btns from "./Btns";
+import Container from "../../Container";
 // import { useFetch } from "./useFetch";
 // import { AppContext } from "../../context";
 const Cards = () => {
@@ -10,7 +11,7 @@ const Cards = () => {
   // const [data] = useFetch(url);
 
   return (
-    <div className="container h-100 cards px-lg-5">
+    <Container className="container h-100 cards px-lg-5 pb-4">
       <div className="row m-auto px-4">
         {/* {cartItem} */}
         {products &&
@@ -45,7 +46,7 @@ const Cards = () => {
             </div>
           ))}
       </div>
-    </div>
+    </Container>
   );
 };
 

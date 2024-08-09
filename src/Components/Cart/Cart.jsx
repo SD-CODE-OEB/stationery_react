@@ -8,14 +8,16 @@ import "./cart.css";
 
 const Cart = () => {
   const PATH = process.env.REACT_APP_PATH;
-  const { cartItem, logged, user, setOrders, orders } = useContext(AppContext);
+  const { cartItem, logged, user, setOrders, setCartItem } =
+    useContext(AppContext);
   // store itemname, quantity, total price and useremail
   const [item, setItem] = useState({});
   const orderUpdate = () => {
     item.email = user.email;
-    item.orderItems = cartItem;
+    item.things = cartItem;
     setItem((prev) => ({ ...prev, item }));
     setOrders((prev) => [...prev, item]);
+    setCartItem(() => []);
   };
   const Navigate = useNavigate();
   return (
@@ -56,10 +58,11 @@ const Cart = () => {
                   type="button"
                   className="btn btn-dark"
                   onClick={() => {
-                    Object.keys(cartItem).map((id) => orderUpdate());
+                    orderUpdate();
+                    Navigate(`${PATH}/orders`);
                   }}
                 >
-                  Submit Order {console.log(orders)}
+                  Submit Order
                 </button>
               ) : (
                 <button
