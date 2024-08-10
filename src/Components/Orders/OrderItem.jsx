@@ -16,7 +16,7 @@ const OrderItem = (props) => {
   return (
     <div>
       <div className="row px-4 fs-4 order">
-        <div className="col-lg-9 col-md-6">
+        <div className="col-lg-9 col-md-6 col-8">
           <div
             className="d-flex flex-wrap order-info fw-normal bg-dark-subtle  fst-italic"
             key={index}
@@ -34,8 +34,11 @@ const OrderItem = (props) => {
             ))} */}
           </div>
         </div>
-        <div className="col-lg-3 col-md-6">
-          <div className="d-flex flex-column flex-wrap ps-2" key={index}>
+        <div className="col-lg-3 col-md-6 col-4 d-flex justify-content-md-center ps-md-3 pe-3">
+          <div
+            className="d-flex flex-column flex-wrap ps-md-4 ps-lg-4 ps-sm-0"
+            key={index}
+          >
             {calculateTotalPrice(order) < 1500 ? (
               <span className="fs-3 fw-bold status-state order-delivered">
                 Delivered

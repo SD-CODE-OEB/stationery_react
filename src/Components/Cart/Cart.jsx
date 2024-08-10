@@ -22,7 +22,7 @@ const Cart = () => {
   const Navigate = useNavigate();
   return (
     <Container className="cart-container">
-      <h1 className="px-lg-4 heading">Cart</h1>
+      <h1 className="px-lg-4 heading fw-bolder text-start">Cart</h1>
       <div className="container">
         {Object.values(cartItem).every((val) => val === 0) ? (
           <div className="container-fluid  d-flex flex-column justify-content-center align-items-center m-0 p-0 overflow-hidden">

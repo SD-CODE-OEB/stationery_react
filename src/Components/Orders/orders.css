@@ -25,3 +25,19 @@
   color: var(--secondary-color);
   filter: drop-shadow(2px 1px 1px var(--accent-color-5));
 }
+
+.order-container .img {
+  height: 300px !important;
+  filter: drop-shadow(3px 3px 1px var(--secondary-color));
+}
+.order-container .empty {
+  margin-top: 5%;
+  color: var(--accent-color-3);
+  filter: drop-shadow(3px 3px 1px var(--secondary-color));
+  letter-spacing: 13px;
+  word-spacing: 36px;
+}
+.order-container .heading {
+  color: var(--secondary-color);
+  filter: drop-shadow(3px 3px 1px var(--accent-color-3));
+}

@@ -7,27 +7,46 @@ import "./orders.css";
 const Orders = () => {
   const { orders, users, user } = useContext(AppContext);
   const found = users.find((p) => p.email === user.email);
-  return (
-    <Container className="bg-dark-subtle">
-      <div className="row order-heading">
-        <div className="col-lg-9 col-md-6">
-          <h1 className="px-3 fw-bolder">Orders</h1>
+  if (found) {
+    return (
+      <Container className="bg-dark-subtle">
+        <div className="row order-heading">
+          <div className="col-lg-9 col-md-6 col-6">
+            <h1 className="px-3 fw-bolder">Orders</h1>
+          </div>
+          <div className="col-lg-3 col-md-6 col-6 d-flex justify-content-center ">
+            <h1 className="fw-bolder">Status</h1>
+          </div>
         </div>
-        <div className="col-lg-3 col-md-6">
-          <h1 className="fw-bolder">Status</h1>
+        <hr />
+        {/* orders is an array to render in vDOM */}
+        {orders
+          .filter(
+            (order) => order.email === user.email && order.email === found.email
+          )
+          .map((order, index) => (
+            <OrderItem order={order} index={index} />
+          ))}
+      </Container>
+    );
+  } else {
+    return (
+      <Container className="order-container">
+        <div className="container-fluid d-flex flex-column justify-content-center align-items-center m-0 p-0 overflow-hidden">
+          <h1 className="px-lg-4 heading fw-bolder">Orders</h1>
+          <img
+            src="https://cdn.pixabay.com/photo/2015/10/22/16/42/icon-1001596_1280.png"
+            alt="empty cart"
+            className="img img-fluid"
+            height={300}
+          />
+          <p className="fs-1 w-100 text-center ps-5 fw-bolder empty">
+            No Orders Yet!
+          </p>
         </div>
-      </div>
-      <hr />
-      {/* orders is an array to render in vDOM */}
-      {orders
-        .filter(
-          (order) => order.email === user.email && order.email === found.email
-        )
-        .map((order, index) => (
-          <OrderItem order={order} index={index} />
-        ))}
-    </Container>
-  );
+      </Container>
+    );
+  }
 };
 
 export default Orders;

@@ -7,7 +7,7 @@ const Logout = () => {
   const Navigate = useNavigate();
   const { setLogged, setUser } = useContext(AppContext);
   setLogged(false);
-  setUser((prev) => ({ ...prev, name: "" }));
+  setUser((prev) => ({ ...prev, name: "", email: "" }));
   Navigate(`${PATH}/login`);
   return <div>Logout</div>;
 };

@@ -31,3 +31,32 @@
 .nav a:hover {
   color: var(--accent-color-2);
 }
+.nav .btn-group .btn-drop {
+  color: var(--accent-color-2);
+  background-color: #02020266;
+}
+.nav .btn-group .btn-drop:hover {
+  color: var(--accent-color-5);
+  background-color: var(--accent-color-2);
+}
+.nav .btn-group .btn-name {
+  color: var(--accent-color-5);
+  background-color: #02020266;
+}
+
+@media only screen and (max-width: 992px) {
+  .collapse .w-100 {
+    width: 25% !important;
+  }
+  .collapse .justify-content-end {
+    justify-content: start !important;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .collapse .w-100 {
+    width: 75% !important;
+  }
+  .collapse .justify-content-end {
+    justify-content: start !important;
+  }
+}
