@@ -8,7 +8,7 @@ import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
   const PATH = process.env.REACT_APP_PATH;
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
   const { user, logged } = useContext(AppContext);
   return (
     <nav className="nav navbar-expand-lg d-flex shadow-sm justify-content-between">
