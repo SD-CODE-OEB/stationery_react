@@ -41,7 +41,7 @@ const Register = (props) => {
 
   return (
     <Container className="register card border-0 rounded-0">
-      <h1 className="card-title text-center fw-bolder m-auto">Sign up</h1>
+      <h1 className="card-title text-center fw-bolder mt-3">Sign up</h1>
       {res === "" ? (
         <></>
       ) : (
@@ -111,7 +111,7 @@ const Register = (props) => {
             </span>
           )}
         </p>
-        <p className="my-0">
+        <p className="my-2">
           <button
             type="button"
             className="btn btn-outline w-100 fw-bold"
@@ -120,7 +120,7 @@ const Register = (props) => {
             Register
           </button>
         </p>
-        <h6 className="fw-bold my-1">
+        <h6 className="fw-bold">
           Already a user ?{" "}
           <Link
             className="link link-danger link-offset-1-hover px-2 fw-bold link-underline-opacity-0-hover"

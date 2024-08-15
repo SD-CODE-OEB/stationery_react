@@ -8,6 +8,7 @@ import Cart from "./Components/Cart/Cart";
 import Orders from "./Components/Orders/Orders";
 import Cards from "./Components/Products/Cards";
 import Footer from "./Components/Header-Footer/Footer";
+import GoogleAuth from "./Components/Auth/GAuth";
 
 function App() {
   const PATH = process.env.REACT_APP_PATH;
@@ -22,6 +23,7 @@ function App() {
           <Route path={`${PATH}/logout`} element={<Logout />} />
           <Route path={`${PATH}/cart`} element={<Cart />} />
           <Route path={`${PATH}/orders`} element={<Orders />} />
+          <Route path={`${PATH}/gauth`} element={<GoogleAuth />} />
         </Routes>
       </Router>
       <hr className="m-0" />

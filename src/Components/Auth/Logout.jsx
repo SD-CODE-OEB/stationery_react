@@ -9,7 +9,7 @@ const Logout = () => {
   setLogged(false);
   setUser((prev) => ({ ...prev, name: "", email: "" }));
   Navigate(`${PATH}/login`);
-  return <div>Logout</div>;
+  return <div></div>;
 };
 
 export default Logout;

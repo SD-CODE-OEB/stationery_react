@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+.dev-name {
+  color: var(--primary-color);
+  position: relative;
+  letter-spacing: 1.5px;
+  filter: drop-shadow(0px 0px 1px var(--accent-color-5));
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+}
 .footer {
   background-color: var(--primary-color);
   color: var(--accent-color-5);
